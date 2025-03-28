@@ -116,3 +116,10 @@ print(dict.get(3,'Upps..')) # 없을 시 'Upps..' 출력
 
 print(dict.pop(1))
 print(dict.pop(1,'Uppps')) # 없을 시 'Upps..' 출력
+
+# 인덱스 위치 다루기
+a = [1,2,3,4,1]
+first = a.index(1)
+second = a.index(1, first + 1)
+print("첫 번째 1의 위치:", first)
+print("두 번째 1의 위치:", second)
