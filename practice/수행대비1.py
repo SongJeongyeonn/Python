@@ -1,7 +1,11 @@
 # 입력: python은 입력을 input()으로 받는다.
 name = input("이름을 입력해주세요: ")
 age = int(input("나이를 입력해주세요: ")) # input은 string 타입이기에 string이 아니면 해당 변수의 타입으로 감싸야함
+# f문자열 포맷
+num = 10000
 print(f'당신의 이름은 {name}이며, 당신이 생일이 안 지났다면 만 {age-2}세압나다.')
+print(f'{"hi":<10}') # "hi"를 왼쪽 정렬로 10칸 채워 출력
+print(f'{num:,}') # ,는 천의 자리수를 나타냄
 
 # 자료형(int, float, str, bool, list, tuple, dict, set, None)
 i: int = 4
@@ -18,27 +22,26 @@ b = False
 
 n = None
 
-# 연속된 자료형
-
 # 리스트: 순서 보장, 중복 허용, 수정 가능
-list = [1,2,3,4,5]
+list = [1,2,3,6,4,5]
 list.append(6)
 print(list)
 list.pop()
 list.insert(1,6)
 print(list) 
 list.remove(6)
+print(list)
 
 doubleList = [[1,2,3],[4,5,6],[7,8,9]]
 print(list+doubleList)
-print(list[0:4], doubleList[0][0])
+print(list[0:4:2], doubleList[0][0])
 
 clist = ["ab", "cd", "de", "fg", "hi"]
 clist[0] = clist[0].upper()
 print(clist[0])
 
-print("1~10까지 홀수만 저장한 리스트") # 좀 연습이 더 필요하다.
-holelist = [a for a in range(1, 11, 2)]
+print("1~10까지 홀수만 저장한 리스트")
+holelist = [a for a in range(1, 11) if a % 2 != 0]
 print(holelist)
 
 # 튜플
@@ -82,7 +85,6 @@ while num > 0:
 print("1부터 100까지의 짝수만 더하면?")
 for i in range(1, 101, 2):
     num += i
-print(f'{num:,}') # ,는 천의 자리수를 나타냄
 
 # 함수
 def two(num):
