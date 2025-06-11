@@ -43,6 +43,7 @@ def paint(message):
 
 def main():
     myfont = pygame.font.SysFont(None, 80)
+    
     key = K_DOWN
     message = None
     game_over = False
