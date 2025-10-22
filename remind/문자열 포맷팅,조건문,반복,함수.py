@@ -86,3 +86,22 @@ while a >= b:
     q += 1
 r = a
 print(f"{q=} {r=}")
+
+# 함수
+def mul(_list):
+    total = 1
+    for i in _list:
+        total *= i
+    return total
+
+print(mul([1, 2, 3, 5, 6, 7, 8, 10]))
+
+# 재귀함수
+def euclid(a:int, b:int) -> int:
+    """
+    두 양의 정수 a와 b의 최대공약수를 구하는 유클리드 호제법 알고리즘
+    """
+    q, r = divmod(a, b)
+    if r == 0:
+        return b
+    return euclid(b, r)
