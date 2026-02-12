@@ -1,0 +1,5 @@
+n = input()
+scores = list(map(int,input().split()))
+big = max(scores)
+sum = sum(scores)
+print(sum*100/big/len(scores))
